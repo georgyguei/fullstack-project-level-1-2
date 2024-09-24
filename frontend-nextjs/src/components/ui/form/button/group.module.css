@@ -1,0 +1,21 @@
+@tailwind components;
+
+@layer components {
+  .button-group {
+        &[data-attached][data-orientation="horizontal"] > button:not(:last-of-type) {
+      @apply -me-px;
+    }
+
+    & > :first-of-type:not(:last-of-type) {
+      @apply rounded-tr-none rounded-br-none;
+    }
+
+    & > :not(:first-of-type):not(:last-of-type) {
+      @apply rounded-none;
+    }
+
+    & > :not(:first-of-type):last-of-type {
+      @apply rounded-tl-none rounded-bl-none;
+    }
+  }
+}

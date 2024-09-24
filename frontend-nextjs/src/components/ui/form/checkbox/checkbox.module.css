@@ -1,0 +1,9 @@
+@tailwind components;
+
+@layer components {
+  .checkbox {
+    .checkbox-icon[data-checked][data-disabled] {
+        @apply border-0 bg-gray-200 text-gray-500;
+      }
+  }
+}
